@@ -33,16 +33,16 @@ def main_staircase():
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
     number_samples = 10000
-    L = 1000
+    L = 10000
     x_interval= 0.1
     
     for epsilon in epsilon_values:
-        noise_laplace = generate_staircase_noise_samples(epsilon, x_interval,
+        noise_staircase = generate_staircase_noise_samples(epsilon, x_interval,
                                                           L, number_samples)
         for file_name in os.listdir(base_directory_input):
             if file_name.endswith('.csv'):
                 file_path = os.path.join(base_directory_input, file_name)
-                process_file_staircase(file_path, epsilon, base_directory_output, noise_laplace)
+                process_file_staircase(file_path, epsilon, base_directory_output, noise_staircase)
 
 if __name__ == '__main__':
     main_staircase()
