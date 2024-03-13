@@ -33,9 +33,12 @@ def main_staircase():
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
     number_samples = 10000
+    L = 1000
+    x_interval= 0.1
     
     for epsilon in epsilon_values:
-        noise_laplace = generate_staircase_noise_samples(number_samples, epsilon)
+        noise_laplace = generate_staircase_noise_samples(epsilon, x_interval,
+                                                          L, number_samples)
         for file_name in os.listdir(base_directory_input):
             if file_name.endswith('.csv'):
                 file_path = os.path.join(base_directory_input, file_name)
