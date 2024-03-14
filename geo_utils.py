@@ -21,5 +21,7 @@ def get_direction(loc1, loc2):
     brng = math.atan2(y, x)
     return brng
 
+def new():
+    pass
 #test to see changes
 #further test to see if it works
