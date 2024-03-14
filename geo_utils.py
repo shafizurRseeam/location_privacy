@@ -22,3 +22,4 @@ def get_direction(loc1, loc2):
     return brng
 
 #test to see changes
+#further test to see if it works
