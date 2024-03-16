@@ -34,7 +34,7 @@ def intermediate(dataset, noise_staircase_bounded):
     true_location = (dataset['Latitude'][0], dataset['Longitude'][0])
     intermediate_location = bounded_planar_staircase_mechanism_point(true_location, noise_staircase_bounded)
     
-    distance_first = haversine(true_location, intermediate_location, unit=Unit.METERS)
+    #distance_first = haversine(true_location, intermediate_location, unit=Unit.METERS)
 
 
     dataset.at[0, 'intermediate_lat'] = intermediate_location[0]
@@ -70,16 +70,16 @@ def only_reported_locations(dataset, noise_staircase, delta):
     #dataset = intermediate(dataset, epsilon, x_interval, bl)  # Assume this generates intermediate locations y1, y2, ..., yn
     
     # Initialize the reported locations column
-    dataset['reported_lat'] = np.nan
-    dataset['reported_lon'] = np.nan
+    dataset['Perturbed_Latitude'] = np.nan
+    dataset['Perturbed_Longitude'] = np.nan
     
     # Handle the first location separately
-#     dataset.at[0, 'reported_lat'], dataset.at[0, 'reported_lon'] = SSLLPM(
+#     dataset.at[0, 'Perturbed_Latitude'], dataset.at[0, 'Perturbed_Longitude'] = SSLLPM(
 #         (dataset.at[0, 'intermediate_lat'], dataset.at[0, 'intermediate_lon'])
 #     )
     
     
-    dataset.at[0, 'reported_lat'], dataset.at[0, 'reported_lon'] = planar_staircase_mechanism_point(
+    dataset.at[0, 'Perturbed_Latitude'], dataset.at[0, 'Perturbed_Longitude'] = planar_staircase_mechanism_point(
         (dataset.at[0, 'intermediate_lat'], dataset.at[0, 'intermediate_lon']), noise_staircase)
     
     
@@ -87,7 +87,7 @@ def only_reported_locations(dataset, noise_staircase, delta):
     
     # Store the current focus point (start with the first point)
     current_focus = (dataset.at[0, 'Latitude'], dataset.at[0, 'Longitude'])
-    current_reported = (dataset.at[0, 'reported_lat'], dataset.at[0, 'reported_lon'])
+    current_reported = (dataset.at[0, 'Perturbed_Latitude'], dataset.at[0, 'Perturbed_Longitude'])
     
     # Iterate over the remaining locations
     for i in range(1, len(dataset)):
@@ -97,17 +97,17 @@ def only_reported_locations(dataset, noise_staircase, delta):
         
         if distance_from_focus < delta:
             # If the distance is below the threshold, report the same location as the current reported location
-            dataset.at[i, 'reported_lat'] = current_reported[0]
-            dataset.at[i, 'reported_lon'] = current_reported[1]
+            dataset.at[i, 'Perturbed_Latitude'] = current_reported[0]
+            dataset.at[i, 'Perturbed_Longitude'] = current_reported[1]
         
         else:
             # If the distance is above the threshold, perturb the intermediate location to get the reported location
-            dataset.at[i, 'reported_lat'], dataset.at[i, 'reported_lon'] = planar_staircase_mechanism_point(
+            dataset.at[i, 'Perturbed_Latitude'], dataset.at[i, 'Perturbed_Longitude'] = planar_staircase_mechanism_point(
                 (dataset.at[i, 'intermediate_lat'], dataset.at[i, 'intermediate_lon']), noise_staircase
             )
             
             # Update the current focus and reported locations
             current_focus = true_location
-            current_reported = (dataset.at[i, 'reported_lat'], dataset.at[i, 'reported_lon'])
+            current_reported = (dataset.at[i, 'Perturbed_Latitude'], dataset.at[i, 'Perturbed_Longitude'])
     
     return dataset
