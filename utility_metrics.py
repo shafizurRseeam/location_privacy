@@ -51,3 +51,7 @@ if __name__ == '__main__':
         base_directory = sys.argv[1]
         process_directory(base_directory)
         print("L1 and L2 distance calculation and saving done for all CSV files in all subdirectories.")
+
+
+#python utility_metrics.py '/Users/shafizurrahmanseeam/Desktop/ARR/AR_GPS_Sensor_Data/Perturbed_10/test'
+        

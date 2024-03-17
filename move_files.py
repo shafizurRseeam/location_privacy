@@ -33,3 +33,4 @@ if __name__ == "__main__":
 
 
 # python move_files.py 'C:\Users\ss6365\Desktop\11111\Geolife\Temporary' 'C:\Users\ss6365\Desktop\11111\Geolife\Perturbed\{mechanism}\{epsilon}' LaplaceDelta5  laplaceDelta 
+#python move_files.py '/Users/shafizurrahmanseeam/Desktop/UCI/Temporary' '/Users/shafizurrahmanseeam/Desktop/UCI/Perturbed/{mechanism}/{epsilon}' LaplaceDelta5  laplaceDelta    
