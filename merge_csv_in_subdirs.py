@@ -4,7 +4,7 @@ import pandas as pd
 
 def merge_csv_in_subdirectory(base_directory):
     # List of important columns to keep
-    important_columns = ['Latitude', 'Longitude', 'Perturbed_Latitude', 'Perturbed_Longitude']
+    important_columns = ['Latitude', 'Longitude', 'Perturbed_Latitude', 'Perturbed_Longitude', 'Identifier']
 
     # Check if the base directory exists
     if not os.path.isdir(base_directory):
@@ -46,4 +46,4 @@ if __name__ == "__main__":
     base_directory = sys.argv[1]
     merge_csv_in_subdirectory(base_directory)
 
-# python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy\geolife\test\Laplace"
+# python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\11111\Geolife\Perturbed\LaplaceDelta5"

@@ -30,6 +30,6 @@ if __name__ == "__main__":
     file_suffix = sys.argv[4]
     move_files(source_directory, destination_directory_template, mechanism, file_suffix)
 
-#execution 
-#python move_files.py "C:\Path\To\Source" "C:\Path\To\Destination\{mechanism}\{epsilon}" Staircase staircase
-    
+
+
+# python move_files.py 'C:\Users\ss6365\Desktop\11111\Geolife\Temporary' 'C:\Users\ss6365\Desktop\11111\Geolife\Perturbed\{mechanism}\{epsilon}' LaplaceDelta5  laplaceDelta 

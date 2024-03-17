@@ -34,11 +34,11 @@ def process_directory(base_directory_path):
                     df = pd.read_csv(file_path)
 
                     # Calculate the L1 distance for each row and create a new column 'l1distance'
-                    df['l1distance'] = df.apply(lambda row: l1_distance(row['Latitude'], row['Longitude'], 
+                    df['l1_distance'] = df.apply(lambda row: l1_distance(row['Latitude'], row['Longitude'], 
                                                                         row['Perturbed_Latitude'], row['Perturbed_Longitude']), axis=1)
 
                     # Calculate the L2 (Haversine) distance for each row and create a new column 'l2distance'
-                    df['l2distance'] = df.apply(lambda row: haversine(row['Latitude'], row['Longitude'], 
+                    df['l2_distance'] = df.apply(lambda row: haversine(row['Latitude'], row['Longitude'], 
                                                                       row['Perturbed_Latitude'], row['Perturbed_Longitude']), axis=1)
 
                     # Save the DataFrame back to the same CSV file
