@@ -34,7 +34,7 @@ def main_laplace_delta_ml():
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
     number_samples = 10000
     delta = 5
-    num_iterations = 10
+    num_iterations = 20
 
     for epsilon in epsilon_values:
         noise_laplace = generate_laplace_noise_samples(number_samples, epsilon)
