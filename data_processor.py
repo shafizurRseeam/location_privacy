@@ -86,9 +86,3 @@ def process_file_staircase_intermediate(file_path, epsilon, base_directory_outpu
 
     perturbed_locations.to_csv(csv_file_path_out, index=False)
     print(f"Processed and saved: {output_csv_file_name}")
-
-def nul():
-
-    p = c
-
-#these are various changes
