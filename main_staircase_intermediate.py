@@ -8,6 +8,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Process data files with Staircase Intermediate Mechanism.')
     parser.add_argument('--input_dir', required=True, help='Directory containing input CSV files.')
     parser.add_argument('--output_dir', required=True, help='Directory to save output CSV files.')
+    parser.add_argument('--bl', type=int, required=True, help='Bounding parameter for the staircase noise.')
+    parser.add_argument('--delta', type=int, required=True, help='Delta parameter for differential privacy.')
     return parser.parse_args()
 
 def main_staircase_intermediate():
@@ -17,6 +19,8 @@ def main_staircase_intermediate():
 
     base_directory_input = args.input_dir
     base_directory_output = args.output_dir
+    bl = args.bl
+    delta = args.delta
     
     # Check if the input directory exists and is a directory
     if not os.path.isdir(base_directory_input):
@@ -31,13 +35,11 @@ def main_staircase_intermediate():
     # Ensure output directory exists
     os.makedirs(base_directory_output, exist_ok=True)
     
-    epsilon_values = [0.1]
-    number_samples = 10
+    epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
+    number_samples = 50000
     L = 10000
     x_interval= 0.1
-    bl = 50
-    delta = 5
-    
+
     for epsilon in epsilon_values:
 
         noise_staircase_bounded = generate_staircase_noise_samples(epsilon, x_interval, bl, number_samples)
