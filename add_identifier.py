@@ -16,7 +16,7 @@ def add_identifier_to_csv(source_directory):
             df = pd.read_csv(file_path)
 
             # Add a new column with the identifier
-            df['Identifier'] = file_identifier
+            df['identifier'] = file_identifier
 
             # Save the modified DataFrame back to CSV
             df.to_csv(file_path, index=False)

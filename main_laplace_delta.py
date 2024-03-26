@@ -32,7 +32,7 @@ def main_laplace_delta():
     os.makedirs(base_directory_output, exist_ok=True)
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 10000
+    number_samples = 50000
     delta = 5
     
     for epsilon in epsilon_values:

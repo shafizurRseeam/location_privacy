@@ -5,14 +5,14 @@ import pandas as pd
 import numpy as np
 
 def encode_locations(df, num_lat_bins, num_lon_bins):
-    lat_min, lat_max = df['Latitude'].min(), df['Latitude'].max()
-    lon_min, lon_max = df['Longitude'].min(), df['Longitude'].max()
+    lat_min, lat_max = df['latitude'].min(), df['latitude'].max()
+    lon_min, lon_max = df['longitude'].min(), df['longitude'].max()
 
     lat_bins = np.linspace(lat_min, lat_max, num_lat_bins + 1)
     lon_bins = np.linspace(lon_min, lon_max, num_lon_bins + 1)
 
-    df['lat_bin'] = pd.cut(df['Latitude'], bins=lat_bins, labels=False, include_lowest=True)
-    df['lon_bin'] = pd.cut(df['Longitude'], bins=lon_bins, labels=False, include_lowest=True)
+    df['lat_bin'] = pd.cut(df['latitude'], bins=lat_bins, labels=False, include_lowest=True)
+    df['lon_bin'] = pd.cut(df['longitude'], bins=lon_bins, labels=False, include_lowest=True)
     
     lat_midpoints = (lat_bins[:-1] + lat_bins[1:]) / 2
     lon_midpoints = (lon_bins[:-1] + lon_bins[1:]) / 2
@@ -22,7 +22,7 @@ def encode_locations(df, num_lat_bins, num_lon_bins):
     
     df['location_id'] = df['lat_bin'] * num_lon_bins + df['lon_bin'] + 1
 
-    avg_coordinates = df.groupby('location_id').agg({'Latitude': 'mean', 'Longitude': 'mean'}).rename(columns={'Latitude': 'avg_latitude', 'Longitude': 'avg_longitude'})
+    avg_coordinates = df.groupby('location_id').agg({'latitude': 'mean', 'longitude': 'mean'}).rename(columns={'latitude': 'avg_latitude', 'longitude': 'avg_longitude'})
     df = df.merge(avg_coordinates, on='location_id', how='left')
 
     return df

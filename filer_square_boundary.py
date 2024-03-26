@@ -13,13 +13,13 @@ def process_directory(input_directory, output_directory, distance_km):
     for csv_file in glob.glob(os.path.join(input_directory, '*.csv')):
         df = pd.read_csv(csv_file)
         
-        central_lat = df['Latitude'].median()
-        central_lon = df['Longitude'].median()
+        central_lat = df['latitude'].median()
+        central_lon = df['longitude'].median()
         
         lat_min, lat_max, lon_min, lon_max = find_square_boundaries(central_lat, central_lon, distance_km)
         
-        df_square = df[(df['Latitude'] >= lat_min) & (df['Latitude'] <= lat_max) &
-                       (df['Longitude'] >= lon_min) & (df['Longitude'] <= lon_max)]
+        df_square = df[(df['latitude'] >= lat_min) & (df['latitude'] <= lat_max) &
+                       (df['longitude'] >= lon_min) & (df['longitude'] <= lon_max)]
         
         base_filename = os.path.splitext(os.path.basename(csv_file))[0]
         new_filename = f"{base_filename}_{distance_km}km.csv"
