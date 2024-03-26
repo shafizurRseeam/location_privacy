@@ -69,8 +69,8 @@ def PSM_optimized(Data, noise_samples_staircase):
     Data['Perturbed_Longitude_S'] = np.nan
     
     for i in range(len(Data)):
-        Latitude = Data.at[i, 'Latitude']
-        Longitude = Data.at[i, 'Longitude']
+        Latitude = Data.at[i, 'latitude']
+        Longitude = Data.at[i, 'longitude']
         
         y, x = lat_lon_to_y_x(Latitude, Longitude)
         
