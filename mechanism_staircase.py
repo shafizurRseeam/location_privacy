@@ -21,21 +21,21 @@ def planar_staircase_mechanism_point(location, noise_staircase):
 
 def planar_staircase_mechanism(dataset, noise_staircase):
     
-    dataset['Perturbed_Latitude'] = np.nan
-    dataset['Perturbed_Longitude'] = np.nan
+    dataset['perturbed_latitude'] = np.nan
+    dataset['perturbed_longitude'] = np.nan
     #dataset['Distance'] = np.nan
 
     
     for i in range(len(dataset)):
         
-        latitude = dataset.at[i, 'Latitude']
-        longitude = dataset.at[i, 'Longitude']
+        latitude = dataset.at[i, 'latitude']
+        longitude = dataset.at[i, 'longitude']
         true_location = (latitude, longitude)
         perturbed_location= planar_staircase_mechanism_point(true_location, noise_staircase)
 
         #distance = haversine(true_location, perturbed_location, unit = Unit.METERS)
-        dataset.loc[i, 'Perturbed_Latitude'] = perturbed_location[0]
-        dataset.loc[i, 'Perturbed_Longitude'] = perturbed_location[1]
+        dataset.loc[i, 'perturbed_latitude'] = perturbed_location[0]
+        dataset.loc[i, 'perturbed_longitude'] = perturbed_location[1]
     
     return dataset
 

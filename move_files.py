@@ -15,7 +15,7 @@ def move_files(source_directory, destination_directory_template, mechanism, file
                     destination_directory = destination_directory_template.format(mechanism=mechanism, epsilon=epsilon)
                     os.makedirs(destination_directory, exist_ok=True)  # Ensure the destination directory exists
                     destination_file = os.path.join(destination_directory, filename)
-                    shutil.copy(source_file, destination_file)
+                    shutil.move(source_file, destination_file)
                     print(f"Moved {filename} to {destination_directory}")
                     break  # Exit the inner loop once a match is found
 
@@ -32,5 +32,4 @@ if __name__ == "__main__":
 
 
 
-# python move_files.py 'C:\Users\ss6365\Desktop\11111\Geolife\Temporary' 'C:\Users\ss6365\Desktop\11111\Geolife\Perturbed\{mechanism}\{epsilon}' LaplaceDelta5  laplaceDelta 
-#python move_files.py '/Users/shafizurrahmanseeam/Desktop/UCI/Temporary' '/Users/shafizurrahmanseeam/Desktop/UCI/Perturbed/{mechanism}/{epsilon}' LaplaceDelta5  laplaceDelta    
+#python move_files.py 'C:\Users\ss6365\Desktop\location_privacy_final\uci\temporary' 'C:\Users\ss6365\Desktop\location_privacy_final\uci\perturbed\{mechanism}\{epsilon}' laplace laplace

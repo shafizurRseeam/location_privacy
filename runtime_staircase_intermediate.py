@@ -79,8 +79,8 @@ def PSM_optimized(Data, noise_samples_staircase):
     Data['Perturbed_Longitude_S'] = np.nan
     
     for i in range(len(Data)):
-        Latitude = Data.at[i, 'Latitude']
-        Longitude = Data.at[i, 'Longitude']
+        Latitude = Data.at[i, 'latitude']
+        Longitude = Data.at[i, 'longitude']
         
         y, x = lat_lon_to_y_x(Latitude, Longitude)
         
@@ -130,7 +130,7 @@ def BSLLPM(Location, noise_samples_staircase):
 def intermediate(dataset, noise_samples_staircase):
     
     dataset = dataset.copy()  # Make a copy to avoid modifying the original DataFrame
-    num_locations = len(dataset['Latitude'])
+    num_locations = len(dataset['latitude'])
 
     # Initialize intermediate and final reported locations
     dataset['intermediate_lat'] = np.nan
@@ -138,7 +138,7 @@ def intermediate(dataset, noise_samples_staircase):
 
     
     # Handle the first location separately
-    true_location = (dataset['Latitude'][0], dataset['Longitude'][0])
+    true_location = (dataset['latitude'][0], dataset['longitude'][0])
     intermediate_location = BSLLPM(true_location, noise_samples_staircase)
     
     distance_first = haversine(true_location, intermediate_location, unit=Unit.METERS)
@@ -151,8 +151,8 @@ def intermediate(dataset, noise_samples_staircase):
     
     # Handle subsequent locations
     for i in range(1, num_locations):
-        true_location = (dataset.at[i, 'Latitude'], dataset.at[i, 'Longitude'])
-        last_true = (dataset.at[i-1, 'Latitude'], dataset.at[i-1, 'Longitude'])
+        true_location = (dataset.at[i, 'latitude'], dataset.at[i, 'longitude'])
+        last_true = (dataset.at[i-1, 'latitude'], dataset.at[i-1, 'longitude'])
         distance = haversine(true_location, last_true, unit=Unit.METERS)
         direction = get_direction(last_true, true_location)
         
@@ -193,13 +193,13 @@ def only_reported_locations(dataset, noise_samples_staircase,delta):
     
     
     # Store the current focus point (start with the first point)
-    current_focus = (dataset.at[0, 'Latitude'], dataset.at[0, 'Longitude'])
+    current_focus = (dataset.at[0, 'latitude'], dataset.at[0, 'longitude'])
     current_reported = (dataset.at[0, 'reported_lat'], dataset.at[0, 'reported_lon'])
     
     # Iterate over the remaining locations
     for i in range(1, len(dataset)):
         
-        true_location = (dataset.at[i, 'Latitude'], dataset.at[i, 'Longitude'])
+        true_location = (dataset.at[i, 'latitude'], dataset.at[i, 'longitude'])
         distance_from_focus = haversine(true_location, current_focus, unit=Unit.METERS)
         
         if distance_from_focus < delta:

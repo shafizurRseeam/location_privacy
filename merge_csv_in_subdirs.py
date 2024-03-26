@@ -4,7 +4,7 @@ import pandas as pd
 
 def merge_csv_in_subdirectory(base_directory):
     # List of important columns to keep
-    important_columns = ['Latitude', 'Longitude', 'Perturbed_Latitude', 'Perturbed_Longitude', 'Identifier']
+    important_columns = ['latitude', 'longitude', 'perturbed_latitude', 'perturbed_longitude', 'identifier']
 
     # Check if the base directory exists
     if not os.path.isdir(base_directory):

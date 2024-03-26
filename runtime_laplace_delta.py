@@ -44,12 +44,12 @@ def planar_laplace_mechanism_point(location, noise_laplace):
 
 def planar_laplace_mechanism_delta(dataset, noise_laplace, delta):
 
-    dataset['Perturbed_Latitude'] = np.nan
-    dataset['Perturbed_Longitude'] = np.nan
-    true_location      = (dataset.at[0, 'Latitude'], dataset.at[0, 'Longitude'])            
+    dataset['perturbed_latitude'] = np.nan
+    dataset['perturbed_longitude'] = np.nan
+    true_location      = (dataset.at[0, 'latitude'], dataset.at[0, 'longitude'])            
     Perturbed_Location = planar_laplace_mechanism_point(true_location, noise_laplace)
-    dataset.at[0, 'Perturbed_Latitude']  =  Perturbed_Location[0]
-    dataset.at[0, 'Perturbed_Longitude'] =  Perturbed_Location[1]
+    dataset.at[0, 'perturbed_latitude']  =  Perturbed_Location[0]
+    dataset.at[0, 'perturbed_longitude'] =  Perturbed_Location[1]
     distance = haversine(true_location, Perturbed_Location, unit = Unit.METERS)
              
     current_focus = true_location
@@ -57,27 +57,27 @@ def planar_laplace_mechanism_delta(dataset, noise_laplace, delta):
 
     for i in range(1, len(dataset)):
 
-        true_location = (dataset.at[i, 'Latitude'], dataset.at[i, 'Longitude'])
+        true_location = (dataset.at[i, 'latitude'], dataset.at[i, 'longitude'])
         distance_from_focus = haversine(true_location, current_focus, unit = Unit.METERS)
 
         if distance_from_focus < delta:
       
-            dataset.at[i, 'Perturbed_Latitude'] = current_reported[0]
-            dataset.at[i, 'Perturbed_Longitude'] = current_reported[1]
+            dataset.at[i, 'perturbed_latitude'] = current_reported[0]
+            dataset.at[i, 'perturbed_longitude'] = current_reported[1]
                 
-            distance = haversine(true_location, (dataset.at[i, 'Perturbed_Latitude'], dataset.at[i, 'Perturbed_Longitude']), unit = Unit.METERS)
+            distance = haversine(true_location, (dataset.at[i, 'perturbed_latitude'], dataset.at[i, 'perturbed_longitude']), unit = Unit.METERS)
 
         else:
 
             Perturbed_Location = planar_laplace_mechanism_point(true_location, noise_laplace)
             
-            dataset.at[i, 'Perturbed_Latitude']  =  Perturbed_Location[0]
-            dataset.at[i, 'Perturbed_Longitude'] =  Perturbed_Location[1]
+            dataset.at[i, 'perturbed_latitude']  =  Perturbed_Location[0]
+            dataset.at[i, 'perturbed_longitude'] =  Perturbed_Location[1]
 
             distance = haversine(true_location, Perturbed_Location, unit = Unit.METERS)
            
-            current_reported = (dataset.at[i,'Perturbed_Latitude'], dataset.at[i,'Perturbed_Longitude'])
-            current_focus    = (  dataset.at[i,'Latitude'], dataset.at[i,'Longitude'])
+            current_reported = (dataset.at[i,'perturbed_latitude'], dataset.at[i,'perturbed_longitude'])
+            current_focus    = (  dataset.at[i,'latitude'], dataset.at[i,'longitude'])
 
     return dataset
 

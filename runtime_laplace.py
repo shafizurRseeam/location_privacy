@@ -38,8 +38,8 @@ def PLM_optimized(Data, noise_samples_laplace):
     Data['Perturbed_Longitude_G'] = np.nan
 
     for i in range(len(Data)):
-        Latitude = Data.at[i, 'Latitude']
-        Longitude = Data.at[i, 'Longitude']
+        Latitude = Data.at[i, 'latitude']
+        Longitude = Data.at[i, 'longitude']
         y, x = lat_lon_to_y_x(Latitude, Longitude)
         Noise_X, Noise_Y = random.choice(noise_samples_laplace)
         Perturbed_X = x + Noise_X
