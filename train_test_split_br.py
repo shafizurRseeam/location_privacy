@@ -10,7 +10,7 @@ def split_and_save_csv(input_csv_path, train_output_dir, test_output_dir, test_s
 
     # Read the CSV file into a DataFrame
     df = pd.read_csv(input_csv_path)
-    df = df[['location_id', 'Perturbed_Latitude', 'Perturbed_Longitude']]
+    df = df[['location_id', 'perturbed_latitude', 'perturbed_longitude']]
 
     # Perform the train-test split
     train_data, test_data = train_test_split(df, test_size=test_size, random_state=random_state)
