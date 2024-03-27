@@ -36,7 +36,8 @@ def main_staircase_intermediate():
     os.makedirs(base_directory_output, exist_ok=True)
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 50000
+    number_samples = 20000
+
     L = 10000
     x_interval= 0.1
 

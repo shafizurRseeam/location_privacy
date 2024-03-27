@@ -32,7 +32,8 @@ def main_laplace():
     os.makedirs(base_directory_output, exist_ok=True)
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 50000
+    number_samples = 20000
+
     
     for epsilon in epsilon_values:
         noise_laplace = generate_laplace_noise_samples(number_samples, epsilon)
