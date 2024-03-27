@@ -46,3 +46,6 @@ def main_staircase():
 
 if __name__ == '__main__':
     main_staircase()
+
+
+# python main_staircase.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\data\utility" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\temporary"    

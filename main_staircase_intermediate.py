@@ -55,3 +55,4 @@ def main_staircase_intermediate():
 
 if __name__ == '__main__':
     main_staircase_intermediate()
+#python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\data\utility" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\temporary" --bl 50 --delta 20
