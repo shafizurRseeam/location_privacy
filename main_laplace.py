@@ -1,8 +1,6 @@
-import argparse
 import os
 import logging
 from data_processor import process_file_laplace
-from noise_generation import generate_laplace_noise_samples
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Process data files with Planar Laplace Mechanism.')
@@ -11,13 +9,15 @@ def parse_arguments():
     return parser.parse_args()
 
 def main_laplace():
-
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     args = parse_arguments()
 
     base_directory_input = args.input_dir
     base_directory_output = args.output_dir
     
+    # Hardcoded noise directory
+    noise_directory = "/path/to/pre_generated_noise"  # Update this path to your actual noise directory
+
     # Check if the input directory exists and is a directory
     if not os.path.isdir(base_directory_input):
         logging.error("Input directory does not exist or is not a directory.")
@@ -32,17 +32,22 @@ def main_laplace():
     os.makedirs(base_directory_output, exist_ok=True)
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 20000
 
-    
     for epsilon in epsilon_values:
-        noise_laplace = generate_laplace_noise_samples(number_samples, epsilon)
+        # Load the pre-generated noise samples for this epsilon
+        noise_laplace = load_noise_samples(epsilon, noise_directory)
+        
         for file_name in os.listdir(base_directory_input):
             if file_name.endswith('.csv'):
                 file_path = os.path.join(base_directory_input, file_name)
                 process_file_laplace(file_path, epsilon, base_directory_output, noise_laplace)
 
+def load_noise_samples(epsilon, noise_dir):
+    """Load noise samples for a given epsilon from a file."""
+    file_path = os.path.join(noise_dir, f"laplace_noise_epsilon_{epsilon}.json")
+    with open(file_path, 'r') as file:
+        samples = json.load(file)
+    return samples
+
 if __name__ == '__main__':
     main_laplace()
-
-#python main_laplace.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\data\utility" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\uci\temporary"
