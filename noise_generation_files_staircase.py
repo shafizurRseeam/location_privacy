@@ -36,7 +36,7 @@ def generate_staircase_noise_samples(epsilon, x_interval, L, number_samples, min
     return samples
 
 def save_noise_samples(samples, epsilon, min_r_value, output_dir):
-    file_name = f"staircase_noise_epsilon_{epsilon}_minr_{min_r_value}.json"
+    file_name = f"staircase_noise_epsilon_{epsilon}_bl_{min_r_value}.json"
     file_path = os.path.join(output_dir, file_name)
     with open(file_path, 'w') as file:
         json.dump(samples, file)
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     min_r_values = [20, 50, 100, 200, 10000]
     x_interval = 0.1
     L = 10000
-    number_samples = 5000
+    number_samples = 20000
 
     for epsilon in epsilon_values:
         for min_r_value in min_r_values:

@@ -37,15 +37,16 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="Generate and save Laplace noise samples.")
     parser.add_argument('output_dir', type=str, help='Directory to save output noise samples.')
     # Ensure this line is exactly as shown, to correctly define the --min_r_value argument
-    parser.add_argument('--min_r_value', type=float, default=5.0, help='Minimum r value to include in samples.')
+    parser.add_argument('--min_r_value', type=float, default=10000.0, help='Minimum r value to include in samples.')
     args = parser.parse_args()
     return args.output_dir, args.min_r_value
 
 if __name__ == '__main__':
     output_dir, min_r_value = parse_arguments()
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 10000  # Adjust as needed
+    number_samples = 20000  # Adjust as needed
     save_noise_samples(epsilon_values, number_samples, min_r_value, output_dir)
 
 
-#python filename.py /path/to/your/output/directory --min_r_value 5.0
+
+#  python noise_generation_files_laplace.py 'C:\Users\ss6365\Desktop\VisualCodeImplementation\noise'

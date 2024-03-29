@@ -1,4 +1,6 @@
 import os
+import json
+import argparse  # Add this line to import argparse
 import logging
 from data_processor import process_file_laplace
 
@@ -16,7 +18,7 @@ def main_laplace():
     base_directory_output = args.output_dir
     
     # Hardcoded noise directory
-    noise_directory = "/path/to/pre_generated_noise"  # Update this path to your actual noise directory
+    noise_directory = r"C:\Users\ss6365\Desktop\VisualCodeImplementation\noise_laplace"  # Update this path to your actual noise directory
 
     # Check if the input directory exists and is a directory
     if not os.path.isdir(base_directory_input):
