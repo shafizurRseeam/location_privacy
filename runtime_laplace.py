@@ -70,25 +70,23 @@ def process_files_in_directory(directory_path, noise_samples_laplace, runs):
             total_points += points_count
     if total_points > 0:
         average_time_per_point = total_time / total_points
-        print(f"Total time: {total_time:.4f} seconds, Average time per point across all runs: {average_time_per_point:.8f} seconds")
+        print(f"Processed directory: {directory_path}\nTotal time: {total_time:.4f} seconds, Average time per point across all runs: {average_time_per_point:.8f} seconds")
     else:
-        print("No data points found in the directory.")
-
+        print(f"No data points found in the directory: {directory_path}.")
 
 def main():
     parser = argparse.ArgumentParser(description="Geoprivacy Perturbation Script")
-    parser.add_argument("directory", type=str, help="Directory path to process CSV files")
+    parser.add_argument("base_directory", type=str, help="Base directory path to process CSV files in subdirectories")
     parser.add_argument("--epsilon", type=float, default=1, help="Epsilon value for Laplace noise")
     parser.add_argument("--runs", type=int, default=1, help="Number of runs for timing measurement")
     args = parser.parse_args()
 
-    directory_path = args.directory
-    noise_samples_laplace = generate_laplace_noise_samples(10, args.epsilon)
-    print(f"Processing CSV files in directory: {directory_path}")
-    process_files_in_directory(directory_path, noise_samples_laplace, args.runs)
+    directories = ['uci', 'collected', 'geolife', 'tdrive']
+    for dir in directories:
+        directory_path = os.path.join(args.base_directory, dir)
+        print(f"Processing CSV files in directory: {directory_path}")
+        noise_samples_laplace = generate_laplace_noise_samples(10, args.epsilon)
+        process_files_in_directory(directory_path, noise_samples_laplace, args.runs)
 
 if __name__ == "__main__":
     main()
-
-
-#python main_runtime.py C:\Path\To\Your\Directory --epsilon 1.5 --runs 5

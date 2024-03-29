@@ -32,6 +32,7 @@ def generate_laplace_noise_samples(n_samples, epsilon):
     for _ in range(n_samples):
         samples.append(random_laplace_noise(epsilon))
     return samples
+
 def planar_laplace_mechanism_point(location, noise_laplace):
     latitude, longitude = location
     y, x = lat_lon_to_y_x(latitude, longitude)
@@ -39,45 +40,31 @@ def planar_laplace_mechanism_point(location, noise_laplace):
     Perturbed_X = x + noise_x
     Perturbed_Y = y + noise_y
     Perturbed_Latitude, Perturbed_Longitude = y_x_to_lat_lon(Perturbed_Y, Perturbed_X)
-    
     return Perturbed_Latitude, Perturbed_Longitude
 
 def planar_laplace_mechanism_delta(dataset, noise_laplace, delta):
-
     dataset['perturbed_latitude'] = np.nan
     dataset['perturbed_longitude'] = np.nan
-    true_location      = (dataset.at[0, 'latitude'], dataset.at[0, 'longitude'])            
+    true_location = (dataset.at[0, 'latitude'], dataset.at[0, 'longitude'])            
     Perturbed_Location = planar_laplace_mechanism_point(true_location, noise_laplace)
-    dataset.at[0, 'perturbed_latitude']  =  Perturbed_Location[0]
-    dataset.at[0, 'perturbed_longitude'] =  Perturbed_Location[1]
-    distance = haversine(true_location, Perturbed_Location, unit = Unit.METERS)
-             
+    dataset.at[0, 'perturbed_latitude'] = Perturbed_Location[0]
+    dataset.at[0, 'perturbed_longitude'] = Perturbed_Location[1]
     current_focus = true_location
     current_reported = Perturbed_Location
 
     for i in range(1, len(dataset)):
-
         true_location = (dataset.at[i, 'latitude'], dataset.at[i, 'longitude'])
-        distance_from_focus = haversine(true_location, current_focus, unit = Unit.METERS)
+        distance_from_focus = haversine(true_location, current_focus, unit=Unit.METERS)
 
         if distance_from_focus < delta:
-      
             dataset.at[i, 'perturbed_latitude'] = current_reported[0]
             dataset.at[i, 'perturbed_longitude'] = current_reported[1]
-                
-            distance = haversine(true_location, (dataset.at[i, 'perturbed_latitude'], dataset.at[i, 'perturbed_longitude']), unit = Unit.METERS)
-
         else:
-
             Perturbed_Location = planar_laplace_mechanism_point(true_location, noise_laplace)
-            
-            dataset.at[i, 'perturbed_latitude']  =  Perturbed_Location[0]
-            dataset.at[i, 'perturbed_longitude'] =  Perturbed_Location[1]
-
-            distance = haversine(true_location, Perturbed_Location, unit = Unit.METERS)
-           
+            dataset.at[i, 'perturbed_latitude'] = Perturbed_Location[0]
+            dataset.at[i, 'perturbed_longitude'] = Perturbed_Location[1]
             current_reported = (dataset.at[i,'perturbed_latitude'], dataset.at[i,'perturbed_longitude'])
-            current_focus    = (  dataset.at[i,'latitude'], dataset.at[i,'longitude'])
+            current_focus = (dataset.at[i,'latitude'], dataset.at[i,'longitude'])
 
     return dataset
 
@@ -102,27 +89,26 @@ def process_files_in_directory(directory_path, noise_samples_laplace, runs, delt
             total_points += points_count
     if total_points > 0:
         average_time_per_point = total_time / total_points
-        print(f"Total time: {total_time:.4f} seconds, Average time per point across all runs: {average_time_per_point:.8f} seconds")
+        print(f"Processed directory: {directory_path}\nTotal time: {total_time:.4f} seconds, Average time per point across all runs: {average_time_per_point:.8f} seconds")
     else:
-        print("No data points found in the directory.")
-
+        print(f"No data points found in the directory: {directory_path}.")
 
 def main():
     parser = argparse.ArgumentParser(description="Geoprivacy Perturbation Script")
-    parser.add_argument("directory", type=str, help="Directory path to process CSV files")
+    parser.add_argument("base_directory", type=str, help="Base directory path to process CSV files in subdirectories")
     parser.add_argument("--epsilon", type=float, default=1, help="Epsilon value for Laplace noise")
     parser.add_argument("--runs", type=int, default=1, help="Number of runs for timing measurement")
-    parser.add_argument("--delta", type=int, default=5, help="distance")
+    parser.add_argument("--delta", type=int, default=5, help="Delta distance for location updates")
 
     args = parser.parse_args()
 
-    directory_path = args.directory
+    subdirectories = ['uci', 'collected', 'geolife', 'tdrive']
     noise_samples_laplace = generate_laplace_noise_samples(10, args.epsilon)
-    print(f"Processing CSV files in directory: {directory_path}")
-    process_files_in_directory(directory_path, noise_samples_laplace, args.runs, args.delta)
+
+    for subdir in subdirectories:
+        directory_path = os.path.join(args.base_directory, subdir)
+        print(f"Processing CSV files in directory: {directory_path}")
+        process_files_in_directory(directory_path, noise_samples_laplace, args.runs, args.delta)
 
 if __name__ == "__main__":
     main()
-
-
-#python main_runtime.py C:\Path\To\Your\Directory --epsilon 1.5 --runs 5

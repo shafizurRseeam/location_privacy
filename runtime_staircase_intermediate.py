@@ -258,7 +258,7 @@ def process_directory(directory_path, noise_samples_staircase, runs, delta):
 
 def main():
     parser = argparse.ArgumentParser(description="Location Privacy Perturbation with Staircase Mechanism")
-    parser.add_argument("directory", type=str, help="Directory path to process CSV files")
+    parser.add_argument("base_directory", type=str, help="Base directory path to process CSV files in subdirectories")
     parser.add_argument("--epsilon", type=float, default=1.0, help="Epsilon value for noise generation")
     parser.add_argument("--delta", type=float, default=5, help="Delta value for distance threshold in reported locations")
     parser.add_argument("--runs", type=int, default=1, help="Number of runs for timing measurement")
@@ -266,9 +266,13 @@ def main():
 
     # Generate noise samples for the staircase mechanism
     noise_samples_staircase = generate_psm_noise_samples(args.epsilon, 0.1, 10000, 10000)  # Adjust parameters as needed
+    
+    subdirectories = ['uci', 'collected', 'geolife', 'tdrive']  # Example subdirectories, adjust as needed or dynamically list directories in the base directory
 
-    print(f"Processing CSV files in directory: {args.directory}")
-    process_directory(args.directory, noise_samples_staircase, args.runs, args.delta)
+    for subdir in subdirectories:
+        directory_path = os.path.join(args.base_directory, subdir)
+        print(f"Processing CSV files in directory: {directory_path}")
+        process_directory(directory_path, noise_samples_staircase, args.runs, args.delta)
 
 if __name__ == "__main__":
     main()
