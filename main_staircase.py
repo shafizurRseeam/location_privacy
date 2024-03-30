@@ -17,6 +17,7 @@ def parse_arguments():
     parser.add_argument('--input_dir', required=True, help='Directory containing input CSV files.')
     parser.add_argument('--output_dir', required=True, help='Directory to save output CSV files.')
     parser.add_argument('--min_r_value', type=int, default=None, help='Optional minimum r value to include in samples.')
+    
     return parser.parse_args()
 
 def main_staircase():

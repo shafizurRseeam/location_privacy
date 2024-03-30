@@ -3,12 +3,17 @@ import os
 import logging
 from data_processor_ml import process_file_laplace_delta_ml
 from noise_generation import generate_laplace_noise_samples
+import json
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Process data files with Planar Laplace Mechanism with Delta.')
     parser.add_argument('--input_dir', required=True, help='Directory containing input CSV files.')
     parser.add_argument('--output_dir', required=True, help='Directory to save output CSV files.')
-    return parser.parse_args()
+    parser.add_argument('--delta', type=int, default=5, help='Delta parameter for differential privacy.')
+    parser.add_argument('--iteration', required=True, help='Directory to save output CSV files.')
+
+    args = parser.parse_args()
+    return args
 
 def main_laplace_delta_ml():
 
@@ -17,7 +22,13 @@ def main_laplace_delta_ml():
 
     base_directory_input = args.input_dir
     base_directory_output = args.output_dir
-    
+    delta = args.delta
+
+    num_iterations_ml = int(args.iteration)
+
+
+    noise_directory = r"C:\Users\ss6365\Desktop\VisualCodeImplementation\noise_laplace"   
+
     # Check if the input directory exists and is a directory
     if not os.path.isdir(base_directory_input):
         logging.error("Input directory does not exist or is not a directory.")
@@ -32,16 +43,22 @@ def main_laplace_delta_ml():
     os.makedirs(base_directory_output, exist_ok=True)
     
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    number_samples = 10000
-    delta = 5
-    num_iterations = 20
+
+
 
     for epsilon in epsilon_values:
-        noise_laplace = generate_laplace_noise_samples(number_samples, epsilon)
+        noise_laplace = load_noise_samples(epsilon, noise_directory)
         for file_name in os.listdir(base_directory_input):
             if file_name.endswith('.csv'):
                 file_path = os.path.join(base_directory_input, file_name)
-                process_file_laplace_delta_ml(file_path, epsilon, base_directory_output, delta, noise_laplace, num_iterations)
+                process_file_laplace_delta_ml(file_path, epsilon, base_directory_output, delta, noise_laplace, num_iterations_ml)
+
+def load_noise_samples(epsilon, noise_dir):
+    """Load noise samples for a given epsilon from a file."""
+    file_path = os.path.join(noise_dir, f"laplace_noise_epsilon_{epsilon}.json")
+    with open(file_path, 'r') as file:
+        samples = json.load(file)
+    return samples
 
 if __name__ == '__main__':
     main_laplace_delta_ml()
