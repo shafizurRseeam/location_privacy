@@ -23,7 +23,7 @@ def process_file_laplace_ml(file_path, epsilon,
         perturbed_results.append(perturbed_locations)
 
 
-    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean()
+    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean(numeric_only=True)
 
 
     
@@ -50,7 +50,7 @@ def process_file_laplace_delta_ml(file_path, epsilon,
         perturbed_locations = planar_laplace_mechanism_delta(df.copy(), noise_laplace, delta)
         perturbed_results.append(perturbed_locations)
 
-    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean()
+    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean(numeric_only=True)
 
     original_file_name = os.path.splitext(os.path.basename(file_path))[0]
     output_csv_file_name = f"{original_file_name}_laplaceDelta_{epsilon}.csv"
@@ -75,7 +75,7 @@ def process_file_staircase_ml(file_path, epsilon, base_directory_output,
         perturbed_locations = planar_staircase_mechanism(df.copy(), noise_staircase)
         perturbed_results.append(perturbed_locations)
 
-    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean()
+    averaged_perturbed_df = pd.concat(perturbed_results).groupby(level = 0).mean(numeric_only=True)
     
     
     original_file_name = os.path.splitext(os.path.basename(file_path))[0]
@@ -108,7 +108,7 @@ def process_file_staircase_intermediate_ml(file_path, epsilon, base_directory_ou
 
         perturbed_results.append(Perturbed_our)
 
-    average_perturbed_df = pd.concat(perturbed_results).groupby(level=0).mean()
+    average_perturbed_df = pd.concat(perturbed_results).groupby(level=0).mean(numeric_only=True)
    
     original_file_name = os.path.splitext(os.path.basename(file_path))[0]
     output_csv_file_name = f"{original_file_name}_our_{epsilon}.csv"
