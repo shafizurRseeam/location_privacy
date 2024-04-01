@@ -26,7 +26,7 @@ commands = [
 #      r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\geolife\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\geolife\temporary" --min_r_value 200 --delta 5 --iteration 20',
 #      r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged\{mechanism}\{epsilon}" our_bl_200_delta_5 our',
 #      r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged\our_bl_200_delta_5"',
-# ]
+ ]
 
 # Execute each command sequentially
 for command in commands:
