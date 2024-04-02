@@ -1,7 +1,7 @@
 import argparse
 import os
 import logging
-from data_processor_ml import process_file_laplace_ml
+from data_processor_ml import process_file_staircase_ml
 from noise_generation import generate_staircase_noise_samples
 import json
 
@@ -61,7 +61,7 @@ def main_staircase_ml():
         for file_name in os.listdir(base_directory_input):
             if file_name.endswith('.csv'):
                 file_path = os.path.join(base_directory_input, file_name)
-                process_file_laplace_ml(file_path, epsilon, base_directory_output, noise_staircase, num_iterations_ml)
+                process_file_staircase_ml(file_path, epsilon, base_directory_output, noise_staircase, num_iterations_ml)
 
 if __name__ == '__main__':
     main_staircase_ml()
