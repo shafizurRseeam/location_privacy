@@ -37,7 +37,7 @@ def main_laplace_ml():
     # Ensure output directory exists
     os.makedirs(base_directory_output, exist_ok=True)
     
-    epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
+    epsilon_values = [0.1]
     
     for epsilon in epsilon_values:
 
