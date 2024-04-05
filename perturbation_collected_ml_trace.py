@@ -5,47 +5,70 @@ import subprocess
 
 commands = [
 
-     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\{mechanism}\{epsilon}" laplace laplace',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\laplace"',
-     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\{mechanism}\{epsilon}" laplace laplace',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\laplace"',
-     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\{mechanism}\{epsilon}" laplace laplace',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\laplace"',
-     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\{mechanism}\{epsilon}" laplace laplace',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\laplace"',
+#Laplace
+     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\{mechanism}\{epsilon}" laplace laplace',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\laplace"',
 
-     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\{mechanism}\{epsilon}" staircase staircase',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\staircase"',
-     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\{mechanism}\{epsilon}" staircase staircase',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\staircase"',
-     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\{mechanism}\{epsilon}" staircase staircase',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\staircase"',
-     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\{mechanism}\{epsilon}" staircase staircase',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\staircase"', 
+     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\{mechanism}\{epsilon}" laplace laplace',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\laplace"',
+
+     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\{mechanism}\{epsilon}" laplace laplace',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\laplace"',
+
+     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_40" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\{mechanism}\{epsilon}" laplace laplace',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\laplace"',
+
+     r'python main_laplace_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_50" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\{mechanism}\{epsilon}" laplace laplace',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\laplace"',
 
 
-     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" --min_r_value 50 --delta 5 --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_20\perturbed_averaged\our_bl_50_delta_5"',
-     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" --min_r_value 50 --delta 5 --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_50\perturbed_averaged\our_bl_50_delta_5"',
-     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" --min_r_value 50 --delta 5 --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_100\perturbed_averaged\our_bl_50_delta_5"',
-     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\data\security" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" --min_r_value 50 --delta 5 --iteration 20',
-     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
-     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\trace\collected_200\perturbed_averaged\our_bl_50_delta_5"',
+#Staircase
+     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\{mechanism}\{epsilon}" staircase staircase',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\staircase"',
 
+     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\{mechanism}\{epsilon}" staircase staircase',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\staircase"',
 
+     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\{mechanism}\{epsilon}" staircase staircase',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\staircase"',
+
+     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_40" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\{mechanism}\{epsilon}" staircase staircase',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\staircase"',
+
+     r'python main_staircase_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_50" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\{mechanism}\{epsilon}" staircase staircase',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\staircase"',
+
+#Our
+
+     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --min_r_value 50 --delta 5 --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_10\our_bl_50_delta_5"',
+
+     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --min_r_value 50 --delta 5 --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_20\our_bl_50_delta_5"',
+
+     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --min_r_value 50 --delta 5 --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_30\our_bl_50_delta_5"',
+
+     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_40" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --min_r_value 50 --delta 5 --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_40\our_bl_50_delta_5"',
+
+     r'python main_staircase_intermediate_ml.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\data\security_50" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" --min_r_value 50 --delta 5 --iteration 20',
+     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\collected\perturbed_averaged_50\our_bl_50_delta_5"',
 
 
 ]
