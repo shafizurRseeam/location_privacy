@@ -50,7 +50,7 @@ def main_staircase_ml():
     # Ensure output directory exists
     os.makedirs(base_directory_output, exist_ok=True)
     
-    epsilon_values = [0.1]
+    epsilon_values = [0.1, 1, 5]
 
 
  
