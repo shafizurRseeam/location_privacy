@@ -13,9 +13,9 @@ def run_fbleau_for_mechanism_and_size(base_directory, knn_strategy, versions, me
             train_base_path = os.path.join(base_directory, "train", mechanism, size)
             test_base_path = os.path.join(base_directory, "test", mechanism, size)
             # Update file naming to include size
-            if "uci" in base_directory:
+            if "udsdsi" in base_directory:
                 dataset_identifier = "_uci"
-            elif "collected" in base_directory:
+            elif "colsdslectd" in base_directory:
                 dataset_identifier = "_collected"
             else:
                 dataset_identifier = ""  # Default to empty if neither is found
@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
     base_directory = sys.argv[1]
     knn_strategy = sys.argv[2]
-    versions = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
+    versions = [0.1, 1, 5]
     mechanisms = ['laplace', 'staircase','our_bl_50_delta_5']
-    sizes = ['60', '100', '200', '300']  # List of directory names
+    sizes = ['60', '100', '120','200', '300', '400']  # List of directory names
 
     run_fbleau_for_mechanism_and_size(base_directory, knn_strategy, versions, mechanisms, sizes)
