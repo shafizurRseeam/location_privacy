@@ -2,11 +2,11 @@ import subprocess
 
 # Define the commands to run, corrected for apparent path errors
 commands = [
-   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged_10" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\machine_learning\attack10"',
-   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged_20" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\machine_learning\attack20"',
-   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged_30" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\machine_learning\attack30"',
-   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged_40" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\machine_learning\attack40"',
-   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\geolife\perturbed_averaged_50" "C:\Users\ss6365\Desktop\location_privacy_final\geolife\machine_learning\attack50"',
+   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\perturbed_averaged_10" "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\machine_learning\attack10"',
+   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\perturbed_averaged_20" "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\machine_learning\attack20"',
+   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\perturbed_averaged_30" "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\machine_learning\attack30"',
+   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\perturbed_averaged_40" "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\machine_learning\attack40"',
+   r'python encode_for_ml.py "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\perturbed_averaged_50" "C:\Users\ss6365\Desktop\location_privacy_final\tdrive\machine_learning\attack50"',
 ]
 
 # Execute each command sequentially
