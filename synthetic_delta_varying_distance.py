@@ -8,30 +8,7 @@ commands = [
 
 
 # #####################################################
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 1',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_1 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_1"',
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 1',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_1 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_1"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 1',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_1 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_1"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 1',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_1 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_1"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 1',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_1 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_1"',
-
-# #####################################################################
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 2',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_2 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_2"',
 
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 2',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_2 our',
@@ -48,56 +25,12 @@ commands = [
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 2',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_2 our',
 #     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_2"',
-# #########################################################################
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 3',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_3 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_3"',
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 2',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\{mechanism}\{epsilon}" our_bl_50_delta_2 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\our_bl_50_delta_2"',
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 3',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_3 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_3"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 3',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_3 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_3"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 3',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_3 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_3"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 3',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_3 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_3"',
-
-# ###########################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 4',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_4 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_4"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 4',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_4 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_4"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 4',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_4 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_4"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 4',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_4 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_4"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 4',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_4 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_4"',    
-
-
-# ##########################################################################################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 5',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_5"',
+## #####################################################
 
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 5',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
@@ -114,97 +47,12 @@ commands = [
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 5',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
 #     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_5"',
-# ##################################################################################################################################
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 6',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_6 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_6"',
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 5',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\{mechanism}\{epsilon}" our_bl_50_delta_5 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\our_bl_50_delta_5"',
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 6',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_6 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_6"',
 
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 6',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_6 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_6"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 6',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_6 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_6"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 6',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_6 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_6"',
-
-# #########################################################################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 7',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_7 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_7"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 7',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_7 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_7"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 7',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_7 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_7"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 7',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_7 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_7"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 7',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_7 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_7"',
-# ############################################################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 8',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_8 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_8"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 8',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_8 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_8"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 8',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_8 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_8"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 8',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_8 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_8"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 8',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_8 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_8"',
-# ##################################################################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 9',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_9 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_9"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 9',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_9 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_9"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 9',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_9 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_9"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 9',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_9 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_9"',
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 9',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_9 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_9"',
-
-# ###################################################################################################
-
-#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_1" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 10',
-#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\{mechanism}\{epsilon}" our_bl_50_delta_10 our',
-#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_1\our_bl_50_delta_10"',
 
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 10',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_10 our',
@@ -221,10 +69,54 @@ commands = [
 #     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 10',
 #     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_10 our',
 #     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_10"',
-      r'python utility_metrics.py "C:\\Users\\ss6365\\Desktop\\location_privacy_final\\synthetic\\perturbed_20_distance_2"',
-      r'python utility_metrics.py "C:\\Users\\ss6365\\Desktop\\location_privacy_final\\synthetic\\perturbed_20_distance_5"',
-      r'python utility_metrics.py "C:\\Users\\ss6365\\Desktop\\location_privacy_final\\synthetic\\perturbed_20_distance_10"',
-      r'python utility_metrics.py "C:\\Users\\ss6365\\Desktop\\location_privacy_final\\synthetic\\perturbed_20_distance_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 10',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\{mechanism}\{epsilon}" our_bl_50_delta_10 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\our_bl_50_delta_10"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 20',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_20 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 20',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_20 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 20',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_20 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 20',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_20 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 20',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\{mechanism}\{epsilon}" our_bl_50_delta_20 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\our_bl_50_delta_20"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_2" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 30',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\{mechanism}\{epsilon}" our_bl_50_delta_30 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_2\our_bl_50_delta_30"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_5" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 30',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\{mechanism}\{epsilon}" our_bl_50_delta_30 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_5\our_bl_50_delta_30"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_10" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 30',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\{mechanism}\{epsilon}" our_bl_50_delta_30 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_10\our_bl_50_delta_30"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_20" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 30',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\{mechanism}\{epsilon}" our_bl_50_delta_30 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_20\our_bl_50_delta_30"',
+
+#     r'python main_staircase_intermediate.py --input_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\data\traj_20_distance_30" --output_dir "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" --min_r_value 50 --delta 30',
+#     r'python move_files.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\temporary" "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\{mechanism}\{epsilon}" our_bl_50_delta_30 our',
+#     r'python merge_csv_in_subdirs.py "C:\Users\ss6365\Desktop\location_privacy_final\synthetic\perturbed_20_distance_30\our_bl_50_delta_30"',
+
+#
+#
+
 
 ]
 
