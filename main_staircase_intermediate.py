@@ -30,7 +30,7 @@ def main_staircase_intermediate():
     predefined_min_r_values = [20, 50, 100, 200, 10000]
     max_min_r_value = max(predefined_min_r_values)
 
-    for epsilon in [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]:
+    for epsilon in [0.1, 1]:
         noise_staircase_bounded = load_staircase_noise_samples(epsilon, args.min_r_value, noise_directory)
         noise_staircase = load_staircase_noise_samples(epsilon, max_min_r_value, noise_directory)
 
