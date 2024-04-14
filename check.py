@@ -31,7 +31,7 @@ def process_all_files(base_train_directory, base_test_directory, mechanisms, dir
 
 def main(base_train_directory, base_test_directory):
     # Mechanisms to process
-    mechanisms = ['laplace', 'staircase', 'our_bl_50_delta_5']
+    mechanisms = ['laplace', 'staircase', 'our_bl_50_delta_5', 'our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20']
     # List of directory names as numeric values
     dir_names = [60, 100, 120, 200, 300, 400]
     process_all_files(base_train_directory, base_test_directory, mechanisms, dir_names)

@@ -26,7 +26,7 @@ def process_directory(input_directory, output_directory, bin_sizes):
     """
     Process all CSV files in a given directory for all specified bin sizes.
     """
-    subdirectories = ['laplace', 'staircase', 'our_bl_50_delta_5']
+    subdirectories = ['laplace', 'staircase', 'our_bl_50_delta_5', 'our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20']
 
     for subdirectory in subdirectories:
         full_path = os.path.join(input_directory, subdirectory)
@@ -56,7 +56,7 @@ if __name__ == "__main__":
         output_directory = sys.argv[2]
 
         # List of bin sizes
-        bin_sizes = [60, 100, 120, 200, 300, 400]
+        bin_sizes = [200, 300, 400]
 
         process_directory(input_directory, output_directory, bin_sizes)
 
