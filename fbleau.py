@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
     base_directory = sys.argv[1]
     knn_strategy = sys.argv[2]
-    versions = [0.1, 1, 5]
-    mechanisms = ['laplace', 'staircase','our_bl_50_delta_5']
-    sizes = ['60', '100', '120','200', '300', '400']  # List of directory names
-
+    versions = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
+    mechanisms = [ 'staircase', 'our_bl_50_delta_5','our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20', 'laplace','our_bl_20_delta_5', 'our_bl_200_delta_5', 'our_bl_500_delta_5'] 
+    sizes = ['200']  # List of directory names
+#'staircase', 'our_bl_50_delta_5','our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20', 'laplace',
     run_fbleau_for_mechanism_and_size(base_directory, knn_strategy, versions, mechanisms, sizes)
