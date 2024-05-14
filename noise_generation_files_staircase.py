@@ -52,7 +52,7 @@ if __name__ == '__main__':
     output_dir = args.output_dir
     # Hardcoded values for epsilon and min_r_value
     epsilon_values = [0.1, 0.2, 0.5, 1, 2, 3, 4, 5]
-    min_r_values = [20, 50, 100, 200, 10000]
+    min_r_values = [500]
     x_interval = 0.1
     L = 10000
     number_samples = 20000
