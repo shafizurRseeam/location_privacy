@@ -28,10 +28,10 @@ def split_and_save_csv(input_csv_path, train_output_dir, test_output_dir, test_s
 
 def main(base_input_directory, base_train_output_directory, base_test_output_directory):
     # Mechanisms to process
-    mechanisms = ['staircase', 'our_bl_50_delta_5', 'laplace']
-
+    mechanisms = [ 'staircase', 'our_bl_50_delta_5','our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20', 'laplace','our_bl_20_delta_5', 'our_bl_200_delta_5', 'our_bl_500_delta_5'] 
+#'staircase', 'our_bl_50_delta_5','our_bl_50_delta_10', 'our_bl_50_delta_15', 'our_bl_50_delta_20', 'laplace',
     # List of directory names as numeric values
-    dir_names = [60, 100, 120, 200, 300, 400]
+    dir_names = [200]
 
     for mechanism in mechanisms:
         print(f"Processing mechanism: {mechanism}")
